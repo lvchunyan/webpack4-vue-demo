@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/lvchunyan/webpack4-vue-demo#readme",
   "devDependencies": {
+    "vue": "^2.6.8",
+    "vue-loader": "^15.7.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   }
