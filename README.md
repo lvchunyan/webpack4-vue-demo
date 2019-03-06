@@ -82,3 +82,43 @@ webpack4项目
        })
 
 - (9)第二次打包
+![报错](https://upload-images.jianshu.io/upload_images/12642255-17d66345fc7e2877.png)
+这是由于vue-loader需要以插件的形式引入,即使安装了，但是我们需要在webpack.config.js中配置
+
+- (10)在根目录下创建webpack.config.js
+
+      const path = require('path')
+      const VueLoaderPlugin = require('vue-loader/lib/plugin')
+       
+      module.exports = {
+        mode: 'development',
+        module: {
+          rules: [
+            {
+              test: /\.vue$/,
+              loader: 'vue-loader'
+            },
+          ]
+        },
+        plugins: [
+          new VueLoaderPlugin()
+        ]
+      }
+
+- (11)第三次打包
+      
+      ERROR in ./src/App.vue
+      Module Error (from ./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js):
+      [vue-loader] vue-template-compiler must be installed as a peer dependency, or a compatible compiler implementation must be passed via options.
+       @ ./src/index.js 2:0-27 6:16-19
+      
+      ERROR in ./src/App.vue
+      Module build failed (from ./node_modules/_vue-loader@15.7.0@vue-loader/lib/index.js):
+      TypeError: Cannot read property 'parseComponent' of undefined
+          at parse (E:\workProject\webpack4-vue-demo\node_modules\_@vue_component-compiler-utils@2.6.0@@vue\component-compiler-utils\dist\parse.js:14:23)
+          at Object.module.exports (E:\workProject\webpack4-vue-demo\node_modules\_vue-loader@15.7.0@vue-loader\lib\index.js:67:22)
+       @ ./src/index.js 2:0-27 6:16-19
+错误很明显了，没有vue-template-compiler，所以我们:cnpm i vue-template-compiler -D
+
+- (12)第四次打包
+![成功](https://upload-images.jianshu.io/upload_images/12642255-9bff1a5f635383e5.png)
