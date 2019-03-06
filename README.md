@@ -1,6 +1,12 @@
 # webpack4-vue-demo
 webpack4项目
 
+注：提交代码时报错（git提交node-modules报文件名过长无法提交问题）
+
+fatal: unable to stat 'node_modules/gulp-connect/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules/validate-npm-package-license/node_modules/spdx-expression-parse/parser.generated.js': Filename too long
+
+在.gitignore文件中忽略node-modules文件
+
 步骤:
 > 1.新建文件夹
 
