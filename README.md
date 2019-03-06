@@ -88,7 +88,9 @@ fatal: unable to stat 'node_modules/gulp-connect/node_modules/gulp-util/node_mod
        })
 
 - (9)第二次打包
+
 ![报错](https://upload-images.jianshu.io/upload_images/12642255-17d66345fc7e2877.png)
+
 这是由于vue-loader需要以插件的形式引入,即使安装了，但是我们需要在webpack.config.js中配置
 
 - (10)在根目录下创建webpack.config.js
@@ -127,4 +129,5 @@ fatal: unable to stat 'node_modules/gulp-connect/node_modules/gulp-util/node_mod
 错误很明显了，没有vue-template-compiler，所以我们:cnpm i vue-template-compiler -D
 
 - (12)第四次打包
+
 ![成功](https://upload-images.jianshu.io/upload_images/12642255-9bff1a5f635383e5.png)
