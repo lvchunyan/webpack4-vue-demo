@@ -1,13 +1,18 @@
 # webpack4-vue-demo
-webpack4项目
 
-注：提交代码时报错（git提交node-modules报文件名过长无法提交问题）
+## 遇到的问题
 
-fatal: unable to stat 'node_modules/gulp-connect/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules/validate-npm-package-license/node_modules/spdx-expression-parse/parser.generated.js': Filename too long
+      注：提交代码时报错（git提交node-modules报文件名过长无法提交问题）
+      fatal: unable to stat 'node_modules/gulp-connect/node_modules/gulp-util/node_modules/dateformat/node_modules/meow/node_modules/normalize-package-data/node_modules/validate-npm-package-license/node_modules/spdx-expression-parse/parser.generated.js': Filename too long
+      在.gitignore文件中忽略node-modules文件
+      
+      intellij idea用git提交之后的文件仍是蓝色
+      每次提交，那个文件都像是没提交过，但是github上已经提交上去了。就是每次提交，它都显示这是要提交的。正常情况下，提交之后就变成白色。下次提交，肯定没有它。
+      处理步骤：1. 打开git bash，命令git status   2. 命令 git reset HEAD <file>
+![](https://upload-images.jianshu.io/upload_images/12642255-9bff1a5f635383e5.png)
 
-在.gitignore文件中忽略node-modules文件
 
-步骤:
+## 步骤:
 > 1.新建文件夹
 
 > 2.安装依赖（命令行工具进入文件夹）
